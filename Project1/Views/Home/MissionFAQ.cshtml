@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "MissionFAQ";
+       
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+<nav class="breadcrumb" style="background-color: lightgray; color: white; font-weight: bold;">
+    <a class="breadcrumb-item" href="http://localhost:49855/Home/Missions?Length=4">Back to Mission Selection</a>
+</nav>
+    <div class="row" style="background-color: lightblue;">
+        
+
+<div class="col-md-6">
+<h1 style="font-weight: bold; color: black;"> Mission Information: </h1>
+<p style="font-weight: bold;">Mission Name: @ViewBag.MissionName</p>
+<p style="font-weight: bold;">Mission President: @ViewBag.President</p>
+<p style="font-weight: bold;">Mission Office Address: @ViewBag.Address</p>
+<p style="font-weight: bold;">Language: @ViewBag.Language</p>
+<p style="font-weight: bold;">Weather Climate: @ViewBag.Climate</p>
+<p style="font-weight: bold;">Dominant Religion in Region: @ViewBag.Church  </p>
+
+            </div>
+        <div class="col-md-6">
+
+            <h1 style="font-weight: bold; color: black;">Offical Flag:</h1>
+
+@if (ViewBag.MissionName.Equals("Sweden Stockholm"))
+{
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTDFz82YKZammtTAFHDPXlghBi0g8RLp8oqEqfthlG9MxvT0kcDVg " style="height: 200px; padding-bottom: 10px;">
+}
+else if (ViewBag.MissionName.Equals("Norway Oslo"))
+{
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzefWitM9w93-yEhnTTVD56JqKsJggfvfPu14l14TewNxPaY718w " style="height: 200px; padding-bottom: 10px;">
+
+
+}
+else if (ViewBag.MissionName.Equals("Finland Helsinki"))
+{
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQD9yUla1RH57zEZt-Mav8JGFKaBZJGeHFCwhXIqVhZMAS4EJ6r " style="height: 200px; padding-bottom: 10px;">
+}
+            </div>
+        </div>
+
+    
+    <div class="row" style="background-color: lightblue;">
+        <div class="col-md-6">
+            <h1 style="font-weight: bold; color: black;"> FAQ </h1>
+            <P style="font-weight: bold;">Q. How Strong is the Church in this mission?</P>
+            <br><br>
+            <p style="font-weight: bold;">Q. How cold does it get there? How should I prepare for this?</p>
+            <br><br>
+            <p style="font-weight: bold;">Q. Will I ever see the sun in the winters? </p>
+            <br><br>
+            <p style="font-weight: bold;">Q. Will I knock a lot of doors? </p>
+         </div>
+   
+            <div class="col-md-6">
+                <br><br><br>
+                <p style="font-weight: bold">A. The church does not have as many members here as in other regions of the world, However, the members 
+                    are very faithful and the church is growing. Now is a very exciting time to serve a mission here. </p>
+                <p style="font-weight: bold;">A. The winters are very cold. You want to make sure to invest in a very warm coat. We'd recommend
+                purchasing one as soon you get here since the coats in the states aren't made the same way. The summers are perfect however. So 
+                that shouldn't be a problem </p>
+                <p style="font-weight: bold;">A. It Depends. If you are very far north, you won't see much of the sun during the winters, 
+                if you're are in the southern region of the country, the sun will be going down around 3PM. The locals prepare for this 
+                and the winters are great </p>
+                
+                <p style="font-weight: bold;">A. I hope not...</p>
+            </div>
+    </div>
+
+    <br>
+    <div class="row" style="background-color: lightblue; padding-left: 10px; padding-bottom: 10px;">
+        <div col-md-12>       
+<h2>User Question Form</h2>
+    <p style="font-weight: bold;">Question not answered? Submit a question below and we will reply!</p>
+
+    <div class="form-group">
+        <label for="form_message">Message *</label>
+        <textarea id="form_message" onclick="myFunction()" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+        <div class="help-block with-errors"></div>
+    </div>
+
+    <input type="submit" class="btn btn-success btn-send" value="Post Question">
+
+    <input type="submit" class="btn btn-success btn-send" value="Reply">
+
+        </div>
+     </div>
+    <br>
+    <div class="row" style="background-color: lightgray; font-weight: bold;">
+        <div class="col-md-12">
+        <p>Directions to mission location</p>
+        
+        <div class="btn-group" style="background-color: lightgray;">
+            <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" style="font-weight: bold; border: solid;">Select Mission <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu" style="font-weight: bold; border: solid;">
+                <li>
+                    @Html.ActionLink("Sweden Stockholm", "Directions", "Home", new
+                   {
+                       sAddress = "38 Enebybergvagen Taby Sweden",
+                      
+                   }, null)
+            </li>
+
+            <li>
+                @Html.ActionLink("Oslo Norway", "Directions", "Home", new
+               {
+                   sAddress = "Post Boks 894 1306 Sandvika Norway",
+                      
+                       
+                   }, null)
+            </li>
+
+            <li>
+                @Html.ActionLink("Helsinki Finland", "Directions", "Home", new
+                   {
+
+                       sAddress = "Upseerinkatu 3 02600 Espoo Finland",
+                      
+                   }, null)
+            </li>
+        </ul>
+    </div>
+            </div>
+
+    </div>
+
+</body>
+
+</html>

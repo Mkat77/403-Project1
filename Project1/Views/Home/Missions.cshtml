@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Missions";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="row" style="background-color: lightblue; border: solid;">
+        <div class="col-md-6" style="background-color: lightblue;">
+            <h1>Mission Selection</h1>
+            <h3>Use the Menu Bar to Select a Mission</h3>
+        </div>
+    
+        <div class="col-md-6" >
+            <br>
+            <div class="btn-group">
+                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" style="font-weight: bold; border: solid;">Select Mission <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" style="font-weight: bold; border: solid;">
+                    <li>@Html.ActionLink("Sweden Stockholm", "MissionFAQ", "Home", new {sName = "Sweden Stockholm",
+                   sPresName = "Gregory Newell", sAddress = "38 Enebybergvagen Taby Sweden", sLanguage = "Swedish", sClimate = "Cold",
+                   sChurch = "Church of Sweden"}, null)</li>
+                    
+                    <li>
+                        @Html.ActionLink("Oslo Norway", "MissionFAQ", "Home", new
+                   {
+                       sName = "Norway Oslo",
+                       sPresName = "Tracy Hill",
+                       sAddress = "Post Boks 894 1306 Sandvika Norway",
+                       sLanguage = "Norweigian",
+                       sClimate = "Cold",
+                       sChurch = "Church of Norway"
+                   }, null)
+                </li>
+                    
+                    <li id=" ">
+                        @Html.ActionLink("Helsinki Finland", "MissionFAQ", "Home", new
+                   {
+                       sName = "Finland Helsinki",
+                       sPresName = "Wayne Watson",
+                       sAddress = "Upseerinkatu 3 02600 Espoo Finland",
+                       sLanguage = "Finnish",
+                       sClimate = "Cold",
+                       sChurch = "Church of Heavy Metal"
+                   }, null)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row" style="background-color: lightgray; border: solid; font-weight: bold;">
+      
+            <div class="col-md-4" >
+                <h3 id="e">"Missionary. Someone who leaves their family for a short time so others may be with theirs for eternity - Elder Kocherhans "</h3>
+            </div>
+
+            <div class="col-md-4">
+                <img src="https://missionary.lds.org/clothing/bc/o/elder/guidelines/elders-general-guidelines-20.jpg" style="height: 150px; padding-top: 10px;">
+                <p><a href="https://www.lds.org/?lang=eng">LDS.Org</a> </p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP5vklxqWCmuftqefyJYnrqlZM4d4MAzgGBYKBMQ4PDuWvzntK-pEDFA" style="height: 150px; padding-top: 10px; ">
+                <p><a href="http://localhost:49855/Home/About?Length=4">More About Us</a> </p>
+            </div>    
+    
+    </div>
+     
+    <br>
+
+    <div class="row"style="background-color: lightgray; border: solid; font-weight: bold;" >
+        <h2>Click on any picture to go to the mission website for that location</h2>
+        <div class="col-md-4">
+        
+            <a href="http://swedenstockholmldsmission.blogspot.com/"><img src="http://www.ldschurchtemples.com/stockholm/gallery/images/stockholm-mormon-temple1.jpg" style="height: 200px; width: 300px; border: solid; border-color: black;"></a>
+             <p>Stockholm Sweden</p>
+        </div>
+
+        <div class="col-md-4">
+            <a href="http://preparetoserve.com/norway-oslo-mission/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8dqG_lRSBGgM23Rx8IpekuiVcQRycYC674vX9Eav2A2rh-h-r" style="height: 200px; width: 300px; border: solid; border-color: black;"></a>
+            <p>Oslo Norway</p>
+        </div>
+
+        <div class="col-md-4">
+            <a href="preparetoserve.com/finland-helsinki-mission"/><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSF--BX6v_v71fYFmW0M-jY9xKk-dSxfkkHPL1RunVYPoxGUevL" style="height: 200px; width: 300px; border: solid; border-color: black;"></a>
+            <p>Helsinki Finland </p>
+        </div>
+    </div>
+</body>
+
+
+</html>
+

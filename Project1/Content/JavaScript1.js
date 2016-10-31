@@ -1,0 +1,6 @@
+﻿
+
+function smyFunction() {
+    $("#message").val('');
+}
+
