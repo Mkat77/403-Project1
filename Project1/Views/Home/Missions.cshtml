@@ -1,4 +1,5 @@
 ﻿@{
+    //The view for the missions page. This section features a drop down menu and several links overall nothing crazy here either
     ViewBag.Title = "Missions";
 }
 
@@ -25,33 +26,12 @@
             <div class="btn-group">
                 <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" style="font-weight: bold; border: solid;">Select Mission <span class="caret"></span></button>
                 <ul class="dropdown-menu" role="menu" style="font-weight: bold; border: solid;">
-                    <li>@Html.ActionLink("Sweden Stockholm", "MissionFAQ", "Home", new {sName = "Sweden Stockholm",
-                   sPresName = "Gregory Newell", sAddress = "38 Enebybergvagen Taby Sweden", sLanguage = "Swedish", sClimate = "Cold",
-                   sChurch = "Church of Sweden"}, null)</li>
+                
+                    <li><a href="@Url.Action("Index","Missions", new {id = 1}, null)">Sweden Stockholm</a></li>
+
+                    <li><a href="@Url.Action("Index","Missions", new {id = 3}, null)">Norway Oslo</a></li>
                     
-                    <li>
-                        @Html.ActionLink("Oslo Norway", "MissionFAQ", "Home", new
-                   {
-                       sName = "Norway Oslo",
-                       sPresName = "Tracy Hill",
-                       sAddress = "Post Boks 894 1306 Sandvika Norway",
-                       sLanguage = "Norweigian",
-                       sClimate = "Cold",
-                       sChurch = "Church of Norway"
-                   }, null)
-                </li>
-                    
-                    <li id=" ">
-                        @Html.ActionLink("Helsinki Finland", "MissionFAQ", "Home", new
-                   {
-                       sName = "Finland Helsinki",
-                       sPresName = "Wayne Watson",
-                       sAddress = "Upseerinkatu 3 02600 Espoo Finland",
-                       sLanguage = "Finnish",
-                       sClimate = "Cold",
-                       sChurch = "Church of Heavy Metal"
-                   }, null)
-                    </li>
+                    <li><a href="@Url.Action("Index","Missions", new {id = 4}, null)">Finland Helsinki</a></li>
                 </ul>
             </div>
         </div>

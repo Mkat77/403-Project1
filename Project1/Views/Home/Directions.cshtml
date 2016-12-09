@@ -1,4 +1,5 @@
 ﻿@{
+    //This page uses google api that calculates a route for the user and will guide them to the mission that they have selected
     ViewBag.Title = "Directions";
 
 }
@@ -37,29 +38,7 @@
             <a href="#" class="autoLink" style="display: none;">Use current location: <span>not found</span></a>
         </label>
        
-        @if (ViewBag.Address.Equals("38 Enebybergvagen Taby Sweden"))
-        { 
-         <label>
-            To: <br />
-             <input type="text" id="routeEnd" value="38 Enebybergvagen Taby Sweden">
-        </label>
-        }
-        else if (ViewBag.Address.Equals("Post Boks 894 1306 Sandvika Norway"))
-        {   
-        <label>
-            To: <br />
-            <input type="text" id="routeEnd" value="Post Boks 894 1306 Sandvika Norway">
-        </label>
-        }
-
-        else if (ViewBag.Address.Equals("Upseerinkatu 3 02600 Espoo Finland"))
-        {
-            <label>
-                To: <br />
-                <input type="text" id="routeEnd" value="Upseerinkatu 3 02600 Espoo Finland">
-            </label>
-        }
-
+       
         <label><input type="radio" name="travelMode" value="DRIVING" checked /> Driving</label>
         <label><input type="radio" name="travelMode" value="BICYCLING" /> Bicylcing</label>
         <label><input type="radio" name="travelMode" value="TRANSIT" /> Public transport</label>

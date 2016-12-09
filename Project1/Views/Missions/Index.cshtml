@@ -1,0 +1,184 @@
+﻿@model Project1.Models.Mission
+
+@{
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div style="background-color: lightgray; border: solid;"  class="row">
+
+        <div class="col-md-12">
+            <h2>Mission Page</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+    </div>
+
+
+            <div style="background-color: lightblue; font-weight: bold;" class="row">
+
+                <div class="col-md-2">
+
+
+                    <p>@Html.DisplayNameFor(model => model.MissionName):</p>
+
+                </div>
+
+
+                <div class="col-md-10">
+
+                    @Html.DisplayFor(model => model.MissionName)
+
+                </div>
+
+            </div>
+
+            <div style="background-color: lightblue; font-weight: bold;" class="row">
+
+                <div class="col-md-2">
+
+                    <p>@Html.DisplayNameFor(model => model.PresidentName):</p>
+
+                </div>
+
+                <div class="col-md-10">
+
+                    @Html.DisplayFor(model => model.PresidentName)
+
+                </div>
+
+            </div>
+
+            <div style="background-color:lightblue; font-weight: bold;" class="row">
+
+                <div class="col-md-2">
+
+                    <p> @Html.DisplayNameFor(model => model.Address):</p>
+
+
+                </div>
+
+                <div class="col-md-10">
+
+                    @Html.DisplayFor(model => model.Address)
+
+                </div>
+
+            </div>
+
+            <div style="background-color: lightblue; font-weight: bold;" class="row">
+
+                <div class="col-md-2">
+
+                    <p>@Html.DisplayNameFor(model => model.Language):</p>
+
+                </div>
+
+                <div class="col-md-10">
+
+                    @Html.DisplayFor(model => model.Language)
+
+                </div>
+
+            </div>
+
+            <div style="background-color:lightblue; font-weight: bold;" class="row">
+
+                <div class="col-md-2">
+
+                    <p> @Html.DisplayNameFor(model => model.Climate):</p>
+
+
+                </div>
+
+                <div class="col-md-10">
+
+                    @Html.DisplayFor(model => model.Climate)
+
+                </div>
+            </div>
+
+            <div style="background-color:lightblue; font-weight: bold;" class="row">
+
+                <div class="col-md-2">
+
+                    <p>@Html.DisplayNameFor(model => model.Religion):</p>
+
+
+                </div>
+
+                <div class="col-md-10">
+
+                    @Html.DisplayFor(model => model.Religion)
+
+                </div>
+            </div>
+
+
+            <div style="background-color: lightblue; font-weight: bold;" class="row">
+
+                <div class="col-md-2">
+
+                    <p>@Html.DisplayNameFor(model => model.Flag):</p>
+
+                </div>
+
+                <div class="col-md-10">
+
+                    <img src="@Html.DisplayFor(model => model.Flag)" />
+
+                </div>
+            </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+    </div>
+
+           
+            <div class="row" style="background-color: lightgray; border: solid; padding-top: 10px;">
+                <div class="col-md-2">
+
+                    <br>
+                    <br>
+           
+                    <a href="http://localhost:49855/Home/Login?ReturnUrl=%2fMissionQuestions" class="btn btn-md btn-block btn-default" style="font-weight: bold; top: 10px;">FAQ Page</a>
+                </div>
+            <div class="col-md-10">
+            
+            </div>
+            </div>
+
+
+</body>
+
+</html>

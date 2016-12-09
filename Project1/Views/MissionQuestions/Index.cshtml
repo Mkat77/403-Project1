@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Project1.Models.MissionQuestions>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="row" style="background-color: lightgray; border: solid;">
+       
+
+    <h2>Mission Questions</h2>
+
+        <div class="col-md-2">
+    
+        
+        </div>
+
+        <div class="col-md-10">
+
+            </div>
+    </div>
+
+    <table class="table" >
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MissionID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Question)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Answer)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MissionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Question)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Answer)
+                </td>
+                <td>
+                    @Html.ActionLink("Respond", "Edit", new { id = item.MissionQuestionID })
+               
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div class="row">
+        <div class="col-md-2">
+    <a href="http://localhost:49855/Home/Missions" class="btn btn-md btn-block btn-default" style="font-weight: bold; border: solid;">Return to Missions</a>
+            </div>
+                <div class="col-md-2">
+                    <a href="http://localhost:49855/MissionQuestions/Create" class="btn btn-md btn-block btn-default" style="font-weight: bold; border: solid;">Ask Question</a>
+                    </div>
+            <div class="col-md-8">
+
+                </div>
+    </div>
+</body>
+
+</html>

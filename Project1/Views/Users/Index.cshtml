@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Project1.Models.Users>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body style="background-color: lightblue;">
+
+
+
+    <h2>User Accounts</h2>
+
+    <p>
+        <button>@Html.ActionLink("Create New User", "Create") </button>
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.UserID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.UserID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.UserID })
+                </td>
+            </tr>
+        }
+       
+    </table>
+
+    <p>
+        <button>@Html.ActionLink("Back to login page", "UserLogin", "Home", new  { }, null) </button>
+    </p>
+
+</body>
+
+</html>
